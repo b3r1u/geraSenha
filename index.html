@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de senhas">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&family=Oswald&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gerador de senha</title>
+</head>
+<body>
+
+   <h1 class="tema">GERADOR DE SENHA</h1>
+   
+    <main class="container-input">
+        <span>Tamanho <span id="valor"></span> caracteres</span>
+        <input id="slider" class="slider" type="range" min="8" max="50" value="25">
+        <br>
+
+        <div class="options">
+            <input class="tipo_senha" type="radio" id="facil_pronunciar" name="tipo">
+            <label>Fácil de pronunciar</label>
+            <input class="tipo_senha" type="radio" id="facil_ler" name="tipo">
+            <label>Fácil de ler</label>
+            <input class="tipo_senha" type="radio" id="todos_caracteres" name="tipo">
+            <label>Todos os caracteres</label>
+        </div>
+        <br>
+
+        <div class="category">
+            <input type="checkbox" id="letra_maiuscula" disabled>
+            <label>Letra maiúscula</label>
+            <input type="checkbox" id="letra_minuscula" disabled>
+            <label>Letra minúscula</label>
+            <input type="checkbox" id="numeros" disabled>
+            <label>Números</label>
+            <input type="checkbox" id="simbolos" disabled>
+            <label>Símbolos</label>
+        </div>
+        <br>
+
+        <br>
+        
+        <div class="rep">   
+            <div class="checkbox-wrapper-8">
+                <h3>Repetição de caracteres</h3>
+                <br>
+                <input class="tgl tgl-skewed" id="cb3-8" type="checkbox"/>
+                <label class="tgl-btn" data-tg-off="OFF" data-tg-on="ON" for="cb3-8"></label>
+              </div>
+        </div>
+        
+        <br>
+       <div class="barra">
+            <div></div>
+       </div>
+        
+        <button id="button" class="button-cta" >Gerar senha</button>
+
+    </main>
+
+    <div id="container-password" onclick="copyPassword()" class="container-password hide">
+        <span class="title">Sua senha gerada foi:</span>
+        <span id="password" class="password"></span>
+        <span class="tooltip">Clique na senha para copiar.</span>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
